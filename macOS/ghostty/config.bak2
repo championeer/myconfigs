@@ -1,0 +1,45 @@
+# Ghostty 简洁美观配置文件
+# 配置文件位置: ~/.config/ghostty/config
+
+# === 主题配置 ===
+# 使用内置的 Catppuccin 主题，支持亮色/暗色自动切换
+# 注意：Ghostty 1.2.0+ 使用 Title Case 主题名称
+theme = "light:Catppuccin Latte,dark:Catppuccin Mocha"
+
+# === 字体配置 ===
+# 使用 JetBrains Mono，如果没有则回退到系统默认等宽字体
+font-family = "JetBrains Mono"
+font-size = 14
+font-thicken = true
+
+# === 窗口配置 ===
+# 设置合适的窗口大小
+window-height = 40
+window-width = 120
+window-padding-balance = true
+window-save-state = always
+
+# === 光标配置 ===
+cursor-style = block
+cursor-style-blink = false
+
+# === 行为配置 ===
+# 滚动优化
+mouse-scroll-multiplier = 2
+#scroll-to-bottom-on = keystroke
+
+# === 终端集成 ===
+# 启用 shell 集成，但禁用可能干扰的功能
+shell-integration-features = no-cursor,sudo,no-title
+
+# === macOS 特定配置（如果在 macOS 上使用）===
+macos-titlebar-style = transparent
+
+# === 可选的美化配置（根据需要取消注释）===
+background-opacity = 0.95
+adjust-cell-height = 35%
+mouse-hide-while-typing = true
+
+# === 键绑定示例（可选）===
+keybind = cmd+t=new_tab
+# keybind = cmd+w=close_surface

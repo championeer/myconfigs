@@ -1,0 +1,61 @@
+# --- 字体与排版 (Visuals) ---
+# 推荐使用带连字的 Nerd Font，JetBrains Mono 是写代码的首选
+font-family = "FiraCode Nerd Font"
+font-family = "Sarasa Term SC"
+# font-family = "JetBrains Mono Nerd Font"
+font-size = 14
+# 启用连字特性 (让 =>, != 等符号显示更优雅)
+font-feature = "+calt,+liga,+dlig"
+# 适当增加行高，避免文字过于拥挤
+adjust-cell-height = 10%
+# 设置中文字体
+# font-codepoint-map = U+4E00-U+9FFF = "等距更纱黑体 Slab SC"
+# font-codepoint-map = U+4E00-U+9FFF = "Maple Mono NF CN Regular"
+
+# --- 主题与外观 (Theme & Appearance) ---
+# 这是一个深色、高对比度且护眼的主题，非常适合长时间工作
+theme = tokyonight
+# 窗口背景透明度与模糊 (营造现代感，但保持文字清晰)
+background-opacity = 0.95
+background-blur-radius = 20
+# 隐藏原生标题栏，追求极致简洁
+# window-decoration = false
+# 给内容留一点呼吸空间
+window-padding-x = 12
+window-padding-y = 12
+# 光标样式：方块且不闪烁 (专注模式)
+cursor-style = block
+cursor-style-blink = false
+
+# --- 行为交互 (Behavior) ---
+# 自动复制选中的文本 (节省 Ctrl+C 操作)
+copy-on-select = true
+# 鼠标隐藏 (打字时隐藏鼠标)
+mouse-hide-while-typing = true
+# 滚动回溯行数
+scrollback-limit = 10000
+
+# --- 窗口管理与快捷键 (Workflow) ---
+# 这里是"不简单"的核心：高效的窗口管理
+
+# 1. 快速分屏 (类似于 iTerm2 或 Tmux)
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+
+# 2. 像 Vim 一样在分屏间跳转 (这是提升效率的关键)
+keybind = cmd+h=goto_split:left
+keybind = cmd+j=goto_split:bottom
+keybind = cmd+k=goto_split:top
+keybind = cmd+l=goto_split:right
+
+# 3. 调整分屏大小
+keybind = cmd+ctrl+h=resize_split:left,10
+keybind = cmd+ctrl+l=resize_split:right,10
+keybind = cmd+ctrl+k=resize_split:up,10
+keybind = cmd+ctrl+j=resize_split:down,10
+
+# 4. 全屏专注切换
+keybind = cmd+enter=toggle_fullscreen
+
+# 5. 快速重载配置 (调整配置后无需重启)
+keybind = cmd+shift+r=reload_config
